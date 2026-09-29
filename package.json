@@ -1,0 +1,11 @@
+{
+  "name": "mall-nursing-room-ops",
+  "version": "1.0.0",
+  "private": true,
+  "description": "商场母婴室巡检与耗材补给系统（楼层/房间/设施/消毒/库存/闭用/报障）",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "seed": "node --no-warnings src/seed-cli.js",
+    "test": "node --no-warnings --test \"test/*.test.js\""
+  }
+}

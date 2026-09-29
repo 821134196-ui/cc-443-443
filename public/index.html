@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#8FA98B">
+  <title>母婴室巡检与补给</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-main">
+      <h1>母婴室巡检与补给</h1>
+      <div class="header-controls">
+        <select id="floor-select" aria-label="楼层筛选"></select>
+        <select id="staff-select" aria-label="当前身份"></select>
+      </div>
+    </div>
+    <div id="escalation-banner" class="escalation-banner hidden"></div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabbar" id="tabbar">
+    <button data-view="overview" class="tab active"><span class="tab-ico">▦</span>总览</button>
+    <button data-view="inspect" class="tab"><span class="tab-ico">✓</span>巡检</button>
+    <button data-view="facilities" class="tab"><span class="tab-ico">◈</span>设施</button>
+    <button data-view="replenish" class="tab"><span class="tab-ico">▤</span>补给<span id="badge-orders" class="badge hidden"></span></button>
+    <button data-view="retest" class="tab"><span class="tab-ico">↻</span>复检<span id="badge-retest" class="badge hidden"></span></button>
+    <button data-view="handover" class="tab"><span class="tab-ico">⇄</span>交接</button>
+  </nav>
+
+  <div id="photo-overlay" class="photo-overlay hidden">
+    <button class="photo-close" aria-label="关闭">×</button>
+    <img id="photo-overlay-img" alt="故障照片大图">
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card" id="modal-card"></div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
