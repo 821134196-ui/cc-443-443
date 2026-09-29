@@ -13,3 +13,9 @@ build/
 轨迹/
 录屏/
 视频/
+
+# 运行时数据：SQLite 与故障照片
+app/data/
+*.db
+*.db-wal
+*.db-shm

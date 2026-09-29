@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>母婴室巡检与耗材补给</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo"></span><b>母婴室巡检</b><small>商场后勤</small></div>
+    <div class="spacer"></div>
+    <div class="staff-picker">
+      <span>值班身份</span>
+      <select id="staffSelect"></select>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <button data-view="overview" class="active">楼层总览</button>
+    <button data-view="inspect">移动巡检</button>
+    <button data-view="facilities">设施状态</button>
+    <button data-view="supply">补给队列<span class="badge" id="supplyBadge" hidden></span></button>
+    <button data-view="repair">维修复测<span class="badge" id="repairBadge" hidden></span></button>
+    <button data-view="handover">班次交接</button>
+  </nav>
+
+  <main id="view"></main>
+
+  <div class="footer-note">本系统不采集顾客姓名、电话等身份信息</div>
+
+  <div class="toast" id="toast"></div>
+  <div class="lightbox" id="lightbox"><button class="lb-close" onclick="app.closePhoto()">×</button><img id="lightboxImg" alt="故障照片大图" /></div>
+  <div class="modal-mask" id="modalMask"><div class="modal" id="modalBody"></div></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
